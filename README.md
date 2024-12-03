@@ -1,5 +1,5 @@
 # Kernel DM Suite
-A MATLAB suite of methods for constructing differentiation matrices on point clouds computed using kernel methods.  
+A MATLAB suite of methods for constructing differentiation matrices (DMs) on point clouds using kernel methods.  
 
 Techniques supported so far:
 
@@ -12,7 +12,7 @@ All of the techniques support various kernels and the inclusion of polynomials i
 
 # Installation and requirements
 
-The Kernel DM Suite is compatible with MATLAB R2018a and later.  It requires the MATLAB statistics toolbox be installed to make use of the KD-tree.
+The Kernel DM Suite is compatible with MATLAB R2018a and later.  It requires the MATLAB statistics toolbox be installed because it makes use of that toolboxes KD-tree.
 
 To install, clone the directory with Git:
 ```
@@ -26,8 +26,8 @@ where `kdmroot` is the path to the kerneldmsuite directory
 
 # Getting started
 
-The following example shows how to use the code to produce approximations to the Laplace-Beltrami operator on the sphere using the restricted surface spline kernel of order 2 with degree 2 spherical harmonics precision.
-```
+The following example shows how to use the code to produce different DMs for the Laplace-Beltrami operator on the sphere.  This example uses the Hammersley point set on the sphere and the restricted surface spline kernel of order 2 ($`\phi(r) = r^4 \log(r)`$) with degree 2 spherical harmonics precision.
+```matlab
 % Point cloud - Hammersley points
 N = 4096;
 x = kdmutil.sphHammersleyNodes(N);
@@ -46,7 +46,7 @@ L = kdmsphere.globlap(x,rbf,deg);
 ```
 More examples can be found in [examples.m](https://github.com/gradywright/kerneldmsuite/blob/main/example.m).
 
-For differentiation matrices based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
+To create differentiation matrices based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
 
 # References:
 
