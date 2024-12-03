@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: kerneldmsuite
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Grady
+    name-particle: B
+    family-names: Wright
+    email: gradywright@boisestate.edu
+    affiliation: Boise State University
+identifiers:
+  - type: url
+    value: 'https://github.com/gradywright/kerneldmsuite'
+repository-code: 'https://github.com/gradywright/kerneldmsuite'
+license: MIT
+version: '0.1'
+date-released: '2024-12-05'

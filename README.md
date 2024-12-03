@@ -10,6 +10,22 @@ Techniques supported so far:
 
 All of the techniques support various kernels and the inclusion of polynomials in the approximation space.
 
+# Installation and requirements
+
+The Kernel DM Suite is compatible with MATLAB R2018a and later.  It requires the MATLAB statistics toolbox be installed to make use of the KD-tree.
+
+To install, clone the directory with Git:
+```
+git clone https://github.com/gradywright/kerneldmsuite.git
+```
+You will then need to add the `kerneldmsuite` directory to the MATLAB path:
+```
+addpath(kdmroot), savepath
+```
+where `kdmroot` is the path to the kerneldmsuite directory
+
+# Getting started
+
 The following example shows how to use the code to produce approximations to the Laplace-Beltrami operator on the sphere using the restricted surface spline kernel of order 2 with degree 2 spherical harmonics precision.
 ```
 % Point cloud - Hammersley points
@@ -32,12 +48,12 @@ More examples can be found in [examples.m](https://github.com/gradywright/kernel
 
 For differentiation matrices based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
 
-## References:
+# References:
 
 [1] T. Hangelbroek, C. Rieger, and G. B. Wright. Spectral stability and perturbation results for kernel differentiation matrices on the sphere. [arXiv:2311.06982](https://arxiv.org/abs/2311.06982)
 
 
-## Acknowledgements 
+# Acknowledgements 
 This software development was partially supported by National Science Foundation grant 2309712.
 
 
