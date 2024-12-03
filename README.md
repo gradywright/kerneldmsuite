@@ -4,9 +4,9 @@ A MATLAB suite of methods for constructing differentiation matrices on point clo
 Techniques supported so far:
 
 * Sphere (see [1] for details)
-+ Radial Basis Function Finite Difference (RBF-FD)
-+ Local Lagrange 
-+ Global or Pseudospectral
+    * Radial Basis Function Finite Difference (RBF-FD)
+    * Local Lagrange 
+    * Global or Pseudospectral
 
 All of the techniques support various kernels and the inclusion of polynomials in the approximation space.
 
@@ -28,7 +28,7 @@ L = kdmsphere.loclaglap(x,rbf,n,deg);
 % DM using Global method
 L = kdmsphere.globlap(x,rbf,deg);
 ```
-More examples can be found in [examples.m](https://raw.github.com/gradywright/kerneldmsuite/master/examples.m).
+More examples can be found in [examples.m](https://github.com/gradywright/kerneldmsuite/blob/main/example.m).
 
 For differentiation matrices based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
 
