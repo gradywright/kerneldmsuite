@@ -9,7 +9,7 @@ message: >-
 type: software
 authors:
   - given-names: Grady
-    name-particle: B
+    name-particle: 
     family-names: Wright
     email: gradywright@boisestate.edu
     affiliation: Boise State University
