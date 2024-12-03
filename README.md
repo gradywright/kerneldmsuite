@@ -3,7 +3,7 @@ A MATLAB suite of methods for constructing differentiation matrices (DMs) on poi
 
 Techniques supported so far:
 
-* Sphere (see [1] for details)
+* Sphere (see [[1]](#HRW24)) for details)
     * Radial Basis Function Finite Difference (RBF-FD)
     * Local Lagrange 
     * Global or Pseudospectral
@@ -46,18 +46,18 @@ L = kdmsphere.globlap(x,rbf,deg);
 ```
 More examples can be found in [examples.m](https://github.com/gradywright/kerneldmsuite/blob/main/example.m).
 
-To create differentiation matrices based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
+To create DMs based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
 
 # References:
 
-[1] T. Hangelbroek, C. Rieger, and G. B. Wright. Spectral stability and perturbation results for kernel differentiation matrices on the sphere. [arXiv:2311.06982](https://arxiv.org/abs/2311.06982)
+<a name="HRW24">[1]</a> T. Hangelbroek, C. Rieger, and G. B. Wright. Spectral stability and perturbation results for kernel differentiation matrices on the sphere. [arXiv:2311.06982](https://arxiv.org/abs/2311.06982)
 
 
 # Acknowledgements 
 This software development was partially supported by National Science Foundation grant 2309712.
 
 
-
+https://github.com/gradywright/kerneldmsuite#references
 
 
 
