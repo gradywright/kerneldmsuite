@@ -44,7 +44,7 @@ L = kdmsphere.loclaglap(x,rbf,n,deg);
 % DM using Global method
 L = kdmsphere.globrbflap(x,rbf,deg);
 ```
-More examples can be found in [example.m](https://github.com/gradywright/kerneldmsuite/blob/main/example.m).
+More examples can be found in [examples](examples/) folder.
 
 To create DMs based on different point clouds on the sphere, use the [spherepts](https://github.com/gradywright/spherepts) package.
 
