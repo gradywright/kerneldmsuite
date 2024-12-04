@@ -1,4 +1,4 @@
-function pass = test_globlapdm( )
+function pass = test_globrbflapdm( )
 
 % Base tolerance for the tests
 tol = 1e-9;
@@ -12,7 +12,7 @@ N = size(x,1);
 deg = 2;
 order = 2;
 p = kernel.phseven(order);
-L = kdmsphere.globlap(x,p,deg);
+L = kdmsphere.globrbflap(x,p,deg);
 
 [NN,MM] = size(L);
 
@@ -29,7 +29,7 @@ pass(j:j+8) = max(abs(err)) < tol;
 j = j+9;
 
 % Check that the method is exact for different RBFs.
-L = kdmsphere.globlap(x,p,-1);
+L = kdmsphere.globrbflap(x,p,-1);
 rid = ceil(N/3);
 xc = x(rid,:);
 rd2 = (x(:,1)-xc(1)).^2 + (x(:,2)-xc(2)).^2 + (x(:,3)-xc(3)).^2;
@@ -43,26 +43,26 @@ j = j+1;
 
 % Check that the correct errors are thrown
 try
-    L = kdmsphere.globlap(x,p,-2);
+    L = kdmsphere.globrbflap(x,p,-2);
     pass(j) = false;
 catch ME
-    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globlap:degree');
+    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globrbflap:degree');
 end
 j = j+1;
 
 try
-    L = kdmsphere.globlap(x(:,1:2),p,2);
+    L = kdmsphere.globrbflap(x(:,1:2),p,2);
     pass(j) = false;
 catch ME
-    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globlap:dimension');
+    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globrbflap:dimension');
 end
 j = j+1;
 
 try
-    L = kdmsphere.globlap(x,2,2);
+    L = kdmsphere.globrbflap(x,2,2);
     pass(j) = false;
 catch ME
-    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globlap:rbf');
+    pass(j) = strcmp(ME.identifier, 'KDMSUITE:DMSPHERE:globrbflap:rbf');
 end
 j = j+1;
 

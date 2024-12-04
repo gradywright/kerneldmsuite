@@ -63,7 +63,7 @@ fprintf('Max-norm error = %.4e\n\n',err)
 fprintf('Construcing Global RBF DM...\n')
 
 tic
-L = kdmsphere.globlap(x,rbf,deg);
+L = kdmsphere.globrbflap(x,rbf,deg);
 etime = toc;
 
 fprintf('Finished in %1.3e s\n',etime);

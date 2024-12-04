@@ -17,7 +17,7 @@ function Lap = loclaglap(nodes,rbf,nd,deg)
 % deg:     Spherical harmonic degree of precision of the formulas, where -1
 %          means no precision
 %
-% see also RBFFDLAP and GLOBLAP
+% see also RBFFDLAP and GLOBRBFLAP
 
 % Copyright 2024 by Grady B. Wright
 

@@ -1,4 +1,4 @@
-function Lap = globlap(nodes,rbf,deg)
+function Lap = globrbflap(nodes,rbf,deg)
 % GLOBLAP Differentiation matrix for the Laplacian on the unit sphere using the
 % global RBF method, or pseudospectral method.
 %
@@ -19,12 +19,12 @@ function Lap = globlap(nodes,rbf,deg)
 % TODO: Add better error checking
 
 if ~isa(rbf,'kernel.rbf')
-    error('KDMSUITE:DMSPHERE:globlap:rbf','The second input must be an RBF object.  For example, p = kernel.phsodd(2) or p = kernel.phseven(2).')
+    error('KDMSUITE:DMSPHERE:globrbflap:rbf','The second input must be an RBF object.  For example, p = kernel.phsodd(2) or p = kernel.phseven(2).')
 end
 
 deg = round(deg);
 if deg < -1
-    error('KDMSUITE:DMSPHERE:globlap:degree','The spherical harmonic degree of precsion must be an integer >= -1.')
+    error('KDMSUITE:DMSPHERE:globrbflap:degree','The spherical harmonic degree of precsion must be an integer >= -1.')
 end
 
 % Dimension of the space of spherical harmonics that will be used.
@@ -33,7 +33,7 @@ L = (deg+1)^2;
 [N,d] = size(nodes);
 
 if d ~= 3
-    error('KDMSUITE:DMSPHERE:globlap:dimension','The nodes array should be of size N-by-3, where each of the N rows corresponds to a point in 3-dimensional space on the sphere.')
+    error('KDMSUITE:DMSPHERE:globrbflap:dimension','The nodes array should be of size N-by-3, where each of the N rows corresponds to a point in 3-dimensional space on the sphere.')
 end
 
 % Compute the eigenvalues for spherical harmonics
