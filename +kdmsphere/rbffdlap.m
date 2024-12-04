@@ -66,8 +66,15 @@ for l=0:deg
 end
 
 % Initialize code to run in parallel
-if isempty(gcp('nocreate'))
-    parpool('Threads');
+try
+    if canUseParallelPool
+        if isempty(gcp('nocreate'))
+            parpool('Threads');
+        end
+    end
+catch
+    % Just proceeed since this means the version of MATLAB is less than 2020b
+    % and the parfor will take care of creating a parpool
 end
 
 % Turn off the annoying warnings
