@@ -1,6 +1,11 @@
 %% Differentiation matrices for the Laplace-Beltrami operator on the sphere
+% The code below gives several examples for approximating the spherical
+% Laplacian of the a function sampled a a point cloud using kernel
+% differentiation matrices.
 
+%
 % Set-up parameters for constructing the differentiation matrices.
+%
 
 % Use Hammersley points.  More options are available from the spherepts package
 N = 4096;
