@@ -12,7 +12,7 @@ All of the techniques support various kernels and the inclusion of polynomials i
 
 # Installation and requirements
 
-The Kernel DM Suite is compatible with MATLAB R2018a and later.  It requires that the MATLAB statistics toolbox be installed because it makes use of that toolboxes KD-tree.
+The Kernel DM Suite is compatible with MATLAB R2018a and later.  It requires that the MATLAB statistics toolbox be installed because it makes use of the KD-tree in that toolbox.
 
 To install, clone the directory with Git:
 ```
